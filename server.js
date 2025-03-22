@@ -4,6 +4,7 @@ import './config/database.js'
 import cors from 'cors'
 import morgan from "morgan"
 import routerIndex from "./router/index.js"
+import error_500 from "./middlewares/error_500.js"
 
 const server = express()
 const PORT = process.env.PORT || 8080
@@ -15,6 +16,7 @@ server.use(cors())
 server.use(morgan('dev'))
 
 server.use('/api', routerIndex)
+server.use(error_500)
 
 server.listen(PORT, ready)
 

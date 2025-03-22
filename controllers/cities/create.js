@@ -11,9 +11,7 @@ let create = async (req,res,next) => {
         })
         
     } catch (error) {
-        return res.status(500).json({
-            response: error
-        })
+        next(error)
     }
 }
 
@@ -28,9 +26,7 @@ let createMany = async (req,res,next) => {
         })
         
     } catch (error) {
-       return res.status(500).json({
-        response: error
-       }) 
+        next(error)
     }
 }
 
