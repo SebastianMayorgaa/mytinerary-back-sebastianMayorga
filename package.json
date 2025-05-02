@@ -9,7 +9,8 @@
     "start": "node ./server.js",
     "dev": "nodemon ./server.js",
     "dataCities": "node ./models/data/citiesData",
-    "dataItinerary": "node ./models/data/itinerariesData"
+    "dataItinerary": "node ./models/data/itinerariesData",
+    "dataUsers": "node ./models/data/usersData"
   },
   "repository": {
     "type": "git",
@@ -23,11 +24,16 @@
   },
   "homepage": "https://github.com/SebastianMayorgaa/mytinerary-back-sebastianMayorga#readme",
   "dependencies": {
+    "bcryptjs": "^3.0.2",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
+    "joi-oid": "^1.1.2",
+    "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.12.2",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "passport": "^0.7.0",
+    "passport-jwt": "^4.0.1"
   },
   "devDependencies": {
     "nodemon": "^3.1.9"
